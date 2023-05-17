@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int begin, end, c=1, b, a, k, invert=0, l, w=0;
+    printf("enter a range: "); 
+    scanf("%d %d", &begin, &end); //reads the numerical range 
+    for(int i=begin; i<=end; i++) {
+        l=i;
+        a=1;
+        k=10;
+        for(int aff=0; aff<1;){
+            if(k>i&&i>=a){ 
+                do{
+                    b=l%10;
+                    l=l/10;
+                    invert=invert+b*a/c;
+                    c=c*10;
+                }while(l>0); //inverts the number
+                c=1;
+                aff++;
+                if(invert==i){ //compares the number with it's inverse
+                    printf("%d\n", i); //prints the palindromes
+                    w++; //calculates the number os palindromes
+                }
+                invert=0; 
+            }
+            else{
+                a=a*10;
+                k=k*10;
+            }
+        }
+    }
+    if(w==0)
+        printf("there are no palindromes in this range");
+
+    return 0;
+}
