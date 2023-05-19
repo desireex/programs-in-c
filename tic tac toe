@@ -1,0 +1,311 @@
+//in portuguese
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+        int posic;
+        char um=' ', dois=' ', tres=' ', quatro=' ', cinco=' ', seis=' ', sete=' ', oito=' ', nove=' ';
+        printf("bem vindos ao jogo da velha!!!\nos números a seguir correspondem às posições das jogadas\n");
+        printf(" 1 | 2 | 3 \n-----------\n 4 | 5 | 6 \n-----------\n 7 | 8 | 9 \n");
+        for(int i=1; i<10; i++){
+        if(i%2!=0) {
+        printf("olá jogador X!\ndetermine a posição na qual deseja posicionar sua peça: ");
+        scanf("%d", &posic);
+        switch(posic){ 
+          case 1:
+            if(um=='O'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              um='X';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 2:
+            if(dois=='O'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              dois='X';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 3:
+            if(tres=='O'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              tres='X';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 4:
+            if(quatro=='O'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              quatro='X';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 5:
+            if(cinco=='O'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              cinco='X';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 6:
+            if(seis=='O'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              seis='X';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 7:
+            if(sete=='O'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              sete='X';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 8:
+            if(oito=='O'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              oito='X';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 9:
+            if(nove=='O'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              nove='X';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          default:
+            printf("posição inexistente");
+            i--;
+            break;
+
+        }
+        if(um!=' '){
+          if(um==dois&&dois==tres){
+            printf("jogador X venceu!");
+            return 0;
+          }
+          else if(um==cinco&&cinco==nove){
+            printf("jogador X venceu!");
+            return 0;
+          }
+          else if(um==quatro&&um==sete){
+            printf("jogador X venceu!");
+            return 0;
+          }
+        }
+        if(cinco!=' '){
+          if(dois==cinco&&cinco==oito){
+            printf("jogador X venceu!");
+            return 0;
+          }
+          else if(tres==cinco&&cinco==sete){
+            printf("jogador X venceu!");
+            return 0;
+          }
+          else if(quatro==cinco&&cinco==seis){
+            printf("jogador X venceu!");
+            return 0;
+          }
+        }
+        if(nove!=' '){
+          if(sete==oito&&oito==nove){
+            printf("jogador X venceu!");
+            return 0;
+          }
+          else if(tres==seis&&seis==nove){
+            printf("jogador X venceu!");
+            return 0;
+          }
+        }
+        }
+        else {
+            printf("ola jogador O!\ndetermine a posicaoo na qual deseja posicionar sua peca: ");
+        scanf("%d", &posic);
+        switch(posic){
+          case 1:
+            if(um=='X'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              um='O';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 2:
+            if(dois=='X'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              dois='O';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 3:
+            if(tres=='X'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              tres='O';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 4:
+            if(quatro=='X'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              quatro='O';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 5:
+            if(cinco=='X'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              cinco='O';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 6:
+            if(seis=='X'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              seis='O';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 7:
+            if(sete=='X'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              sete='O';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 8:
+            if(oito=='X'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              oito='O';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          case 9:
+            if(nove=='X'){
+              printf("posição ocupada");
+              i--;
+              break;
+              }
+            else{
+              nove='O';
+              printf(" %c | %c | %c \n-----------\n %c | %c | %c \n-----------\n %c | %c | %c \n",um, dois, tres, quatro, cinco, seis, sete, oito, nove);
+              break;
+            }
+          default:
+            printf("posição inexistente");
+            i--;
+            break;
+
+        }
+        if(um!=' '){
+          if(um==dois&&dois==tres){
+            printf("jogador O venceu!");
+            return 0;
+          }
+          else if(um==cinco&&cinco==nove){
+            printf("jogador O venceu!");
+            return 0;
+          }
+          else if(um==quatro&&um==sete){
+            printf("jogador O venceu!");
+            return 0;
+          }
+        }
+        if(cinco!=' '){
+          if(dois==cinco&&cinco==oito){
+            printf("jogador O venceu!");
+            return 0;
+          }
+          else if(tres==cinco&&cinco==sete){
+            printf("jogador O venceu!");
+            return 0;
+          }
+          else if(quatro==cinco&&cinco==seis){
+            printf("jogador O venceu!");
+            return 0;
+          }
+        }
+        if(nove!=' '){
+          if(sete==oito&&oito==nove){
+            printf("jogador O venceu!");
+            return 0;
+          }
+          else if(tres==seis&&seis==nove){
+            printf("jogador O venceu!");
+            return 0;
+          }
+        }
+        }
+        }
+    printf("empate! deu velha :(");
+    return 0;
+}
